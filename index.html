@@ -7,7 +7,7 @@
   <meta name="description" content="A multi-month neurological transformation program that resolves limiting patterns at both layers where they're encoded. Three participants. Two practitioners. Five immersive days.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ========================================
        HOLON BRAND SYSTEM
@@ -939,6 +939,110 @@
       .step-block[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
       }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 18px 24px;
+        font-size: 1.05rem;
+      }
+    }
+
+    /* ========================================
+       STICKY MOBILE CTA BAR
+    ======================================== */
+
+    .sticky-cta-bar {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .sticky-cta-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(8, 12, 17, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 12px 16px;
+        border-top: 1px solid rgba(154, 125, 76, 0.3);
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+      .sticky-cta-bar.visible {
+        transform: translateY(0);
+      }
+      .sticky-cta-bar .btn {
+        display: block;
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    /* ========================================
+       HERO VIDEO: DISABLE ON MOBILE
+    ======================================== */
+
+    @media (max-width: 900px) {
+      .hero-bg-video video {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       QEEG BEFORE/AFTER: STACK ON MOBILE
+    ======================================== */
+
+    .qeeg-pair-grid {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .qeeg-pair-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .qeeg-pair-grid .qeeg-arrow {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       MID-PAGE CTA BREAK
+    ======================================== */
+
+    .cta-break {
+      text-align: center;
+      padding: 56px 24px;
+    }
+
+    .cta-break .cta-micro {
+      font-size: 0.88rem;
+      color: var(--body-gray-subtle);
+      font-style: italic;
+      margin-top: 14px;
+    }
+
+    /* CTA micro-copy (scarcity line beneath buttons) */
+    .cta-micro {
+      font-size: 0.88rem;
+      color: var(--body-gray-subtle);
+      font-style: italic;
+      margin-top: 14px;
+    }
+
+    .theme-white .cta-micro {
+      color: #888;
     }
   </style>
 </head>
@@ -1061,6 +1165,14 @@
       <p>It's not that those approaches didn't work. They worked beautifully — on one layer. The ceiling isn't a failure of effort. <strong>It's a structural gap.</strong></p>
     </div>
   </section>
+
+  <!-- ====================================
+       MID-PAGE CTA (after reframe — captures readers sold on the problem)
+  ===================================== -->
+  <div class="cta-break theme-dark">
+    <a href="#apply" class="btn">See If This Is the Right Fit</a>
+    <p class="cta-micro">Limited to three participants per cohort.</p>
+  </div>
 
   <!-- ====================================
        SECTION 5: MECHANISM (dark)
@@ -1225,6 +1337,7 @@
         <p>Across seven months of practitioner-guided neurological transformation. That's roughly $2,500 per month for the only dual-layer program available anywhere — with a 3-person cap and 12-hour immersive days that no competitor matches.</p>
         <p><strong>You've spent more than this on approaches that addressed half the problem.</strong></p>
         <a href="#apply" class="btn">Apply for the Signature Intensive</a>
+        <p class="cta-micro">Limited to three participants per cohort.</p>
       </div>
     </div>
   </section>
@@ -1245,6 +1358,7 @@
         <p>We do something no one else in this space does: we show you.</p>
         <p>Before-and-after QEEG brain maps with detailed write-ups — not just for the practitioners, but for you. Measurable, visible, structural change in your brain's electrical architecture.</p>
         <p>This isn't anecdote. This isn't "I feel different." This is quantified, documented neurological transformation that you can see with your own eyes.</p>
+        <p style="font-style: italic; color: var(--warm-white); margin-top: 24px;">Those are words. Here is what it looks like in the brain.</p>
 
         <!-- QEEG BEFORE/AFTER GALLERY: The single most important visual on this page.
              Art direction: Side-by-side BEFORE (left) and AFTER (right) QEEG topographic maps.
@@ -1255,12 +1369,12 @@
         <div style="margin: 32px 0 48px;">
           <!-- Before/After Pair 1 -->
           <div style="background: #0C1620; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
-            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+            <div class="qeeg-pair-grid">
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
               </div>
-              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div class="qeeg-arrow" style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
@@ -1271,12 +1385,12 @@
 
           <!-- Before/After Pair 2 -->
           <div style="background: #0C1620; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
-            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+            <div class="qeeg-pair-grid">
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
               </div>
-              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div class="qeeg-arrow" style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
@@ -1287,12 +1401,12 @@
 
           <!-- Before/After Pair 3 -->
           <div style="background: #0C1620; border-radius: 8px; padding: 32px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
-            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+            <div class="qeeg-pair-grid">
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
               </div>
-              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div class="qeeg-arrow" style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
               <div>
                 <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
                 <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
@@ -1302,7 +1416,8 @@
           </div>
         </div>
 
-        <h3 style="margin-bottom: 32px;">What Participants Say</h3>
+        <h3 style="margin-bottom: 16px;">What Participants Report</h3>
+        <p style="margin-bottom: 32px;">The people who come to this intensive are not easily impressed. They've invested in coaching, retreats, therapy, plant medicine, and in some cases, other neurofeedback programs. They know what real change feels like — and what temporary relief pretending to be change feels like. Here is what they say, in their own words.</p>
 
         <div class="testimonials-grid">
           <div class="testimonial">
@@ -1460,65 +1575,86 @@
 
       <div class="faq-list">
         <details class="faq-item">
+          <summary>Why does this cost $17,500?</summary>
+          <div class="faq-answer">
+            <p>$17,500 covers approximately seven months of practitioner-guided work — four weeks of preparation, five days of 12-hour immersive sessions with a 3:2 participant-to-practitioner ratio, and six months of integration support. That works out to roughly $2,500 per month. Each cohort is capped at three participants. Your practitioners hold advanced credentials in clinical neuroscience and have upgraded their protocol with 8-channel synchrony and transcranial stimulation capabilities up to 1000Hz STEM — equipment and expertise that do not exist in standard clinical neurofeedback settings. You are not paying for five days. You are investing in seven months of precision neurological work delivered at a density and depth that no weekly-session program can replicate.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>I've already spent a lot on personal development. Why would this be different?</summary>
+          <div class="faq-answer">
+            <p>That investment was not wasted — it got you to the level of functioning you operate at now. But if you have done therapy, coaching, meditation, plant medicine, biohacking protocols, or even standard neurofeedback and still hit the same ceiling, the issue is structural: patterns are encoded at two layers (neurological and energetic), and every approach you have tried addresses only one. The Signature Intensive is the only protocol that works both layers simultaneously through Dual-Layer Neuro Repatterning. That is why participants who have invested extensively in prior modalities consistently report that this produced results nothing else did. As Jason Appel, CEO, put it: "There are many great resources out there, but I personally have experienced nothing previously that provided such a seismic jumpstart."</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What kind of results can I expect, and how are they measured?</summary>
+          <div class="faq-answer">
+            <p>We provide before-and-after QEEG brain maps with detailed clinical write-ups — quantified, documented neurological change you can see with your own eyes. We typically observe immediate improvements in electrical function of up to 40% compared to the initial EEG baseline. By Day Five, we see shifts of approximately two standard deviations — changes that would take months or years in standard clinical neurofeedback. Beyond the measurable brain changes, participants consistently report improved clarity, emotional regulation, decision-making speed, and sleep quality. Neural tissue grows at roughly 1mm per month, which means these structural changes continue compounding throughout the six-month integration period.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What about the energetic work? That sounds like it could be... unscientific.</summary>
+          <div class="faq-answer">
+            <p>Fair question. When we say "energetic," we are referring to the nervous system, somatic memory, and protective structures stored in the body — not metaphysics. Decades of research in somatic psychology and polyvagal theory have established that the body encodes patterns independently of the brain's electrical activity. Standard neurofeedback addresses the brain's electrical architecture (Layer 1) but leaves the nervous system's stored protective responses untouched (Layer 2). That second layer is why gains from electrical-only work often plateau or slowly reverse — the body's patterns quietly reinstall what the brain released. The dual-layer protocol addresses both simultaneously. No crystals. No incense. Nervous system science applied with clinical precision.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there a guarantee or refund policy?</summary>
+          <div class="faq-answer">
+            <p>The Signature Intensive uses an application and interview process specifically so that both sides confirm mutual fit before any commitment is made. We are selective — every participant in a three-person cohort must be fully committed for the format to work. The application conversation is where we assess fit honestly, including whether this is the right approach for your specific situation. We would rather tell you this is not the right fit than take your investment and deliver a suboptimal experience. Details on the commitment structure are covered during the application process.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
           <summary>How is this different from other neurofeedback programs?</summary>
           <div class="faq-answer">
-            <p>Most neurofeedback programs — including very good ones — work exclusively with the brain's electrical patterns. That's powerful, and it produces real results. But patterns are encoded at two levels: the neurological (brain wave architecture) and the deeper energetic body (nervous system, somatic memory, protective structures). Programs that address only the electrical patterns leave the second layer untouched — which is why gains often plateau or slowly reverse. The Signature Intensive is the only program that addresses both layers simultaneously, which is why the changes compound rather than fade.</p>
+            <p>Three structural differences. First, depth: most neurofeedback programs — including good ones — work exclusively with the brain's electrical patterns (Layer 1). The Signature Intensive also addresses the energetic body — nervous system, somatic memory, protective structures (Layer 2). Programs that address only Layer 1 leave the second layer to silently reinstall resolved patterns, which is why gains often plateau or reverse. Second, density: five days of 12-hour sessions with a 3:2 participant-to-practitioner ratio produces a neurological inflection point that weekly sessions cannot reach. Third, precision: Dr. Drew Pierson's protocol uses 8-channel synchrony and transcranial stimulation up to 1000Hz STEM — and he reads brain maps for potential rather than pathology, designing interventions around capability rather than deficit.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>What kind of results can I expect?</summary>
+          <summary>Why five days? Why not longer — or shorter?</summary>
           <div class="faq-answer">
-            <p>We typically see immediate improvements in electrical function of up to 40% compared to the initial EEG baseline. By Day Five, we observe shifts of approximately two standard deviations — changes that would take months or years in standard clinical neurofeedback settings. Beyond the measurable brain changes, participants consistently report improved clarity, emotional regulation, decision-making, sleep quality, and a felt sense of being "unlocked" or "reset." These changes deepen over the six-month integration period as neural tissue continues growing at roughly 1mm per month.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Why five days? Why not longer?</summary>
-          <div class="faq-answer">
-            <p>Five days of 12-hour immersive sessions with a 3:2 participant-to-practitioner ratio produces a neurological inflection point that weekly sessions cannot match. The intensity and continuity allow the brain to reorganize at a structural level rather than making incremental surface adjustments. The six-month integration arc then allows those structural changes to consolidate permanently. Extending the immersion would produce diminishing returns; the compounding happens in the months that follow.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What happens in the preparation phase?</summary>
-          <div class="faq-answer">
-            <p>During the four weeks before your immersion, you'll complete a comprehensive health history and goals assessment, begin a personalized supplement and nutrition protocol, engage in shadow work and self-assessment processes, and meet your practitioner team. This isn't paperwork — it's the foundation for precision. By Day One, your practitioners already know your neurological and energetic landscape intimately.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What if I've already done neurofeedback?</summary>
-          <div class="faq-answer">
-            <p>Many of our participants have. Standard clinical neurofeedback — weekly sessions over months — produces real but incremental change at the electrical level. The Signature Intensive goes deeper on two axes: the immersive format produces structural rather than incremental change, and the dual-layer protocol addresses the energetic patterns that standard neurofeedback cannot reach. If you've done neurofeedback and found it helpful but incomplete, this is why.</p>
+            <p>Five days of 12-hour immersive sessions with two dedicated practitioners produces a neurological inflection point that shorter formats cannot reach and longer formats cannot improve upon. The intensity and continuity allow the brain to reorganize at a structural level rather than making incremental surface adjustments. Extending the immersion produces diminishing returns because the brain needs time to consolidate structural changes. That is what the six-month integration period is for — neural tissue grows at approximately 1mm per month, so the compounding happens in the months that follow. The five-day format is not arbitrary. It is calibrated to how the brain actually changes.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Is this backed by science?</summary>
           <div class="faq-answer">
-            <p>Neurofeedback is grounded in decades of peer-reviewed research on neuroplasticity — the brain's ability to rewire its own structure. QEEG brain mapping is a well-established diagnostic tool used in clinical neuroscience worldwide. Dr. Drew Pierson's protocol has been significantly upgraded with 8-channel synchrony and transcranial stimulation capabilities up to 1000Hz STEM. We provide before-and-after QEEG brain maps with detailed write-ups so you can see the measured changes in your own brain architecture.</p>
+            <p>Neurofeedback is grounded in decades of peer-reviewed research on neuroplasticity — the brain's documented ability to rewire its own structure. QEEG brain mapping is a well-established diagnostic tool used in clinical neuroscience worldwide. Dr. Drew Pierson's protocol has been significantly upgraded with 8-channel synchrony and transcranial stimulation capabilities up to 1000Hz STEM. We provide before-and-after QEEG brain maps with detailed write-ups so you can see the measured changes in your own brain architecture. We are not asking you to take our word for it. We are showing you the data.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>What's the investment?</summary>
+          <summary>What if I've already done neurofeedback and it didn't fully work?</summary>
           <div class="faq-answer">
-            <p>$17,500 for the complete multi-month program — four weeks of preparation, five days of immersive dual-layer work, and six months of practitioner-guided integration. This is not a fee for five days; it's an investment in approximately seven months of elite neurological transformation with a maximum of three participants per cohort.</p>
+            <p>Many of our participants have. Standard clinical neurofeedback — weekly sessions over months — produces real but incremental change at the electrical level. The Signature Intensive goes deeper on two axes: the immersive format produces structural rather than incremental change, and the dual-layer protocol addresses the energetic patterns that standard neurofeedback cannot reach. If you have done neurofeedback and found it helpful but incomplete, this is precisely why. Dave Burns, an executive coach and long-time personal development participant, said: "I have never experienced a stronger combination of transformation and self-optimization. I came home a better, more effective, and happier man."</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>Where does this take place?</summary>
+          <summary>What if I have a medical condition or am on medication?</summary>
           <div class="faq-answer">
-            <p>Northern San Diego County, California. Specific location details are provided upon acceptance.</p>
+            <p>The four-week preparation phase includes a detailed health history review for exactly this reason. Certain conditions — including active seizure disorders, specific psychiatric medications, and recent traumatic brain injuries — may require protocol modifications or may indicate that this is not the right fit. We assess every applicant's medical context individually during the application and preparation process. If there is any question about your specific situation, raise it in the application conversation. We will give you a direct, honest answer.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>How do I know if I'm a fit?</summary>
+          <summary>Can I do a second intensive later?</summary>
           <div class="faq-answer">
-            <p>If you've read this far and recognized yourself, you probably are. The application process includes a conversation with our team to ensure mutual fit — we are selective because the intimate format requires that every participant in a cohort is fully committed.</p>
+            <p>Yes. Some participants return for a second intensive after their integration period. The second round works with a different neurological baseline — the brain you bring back is structurally different from the one you arrived with the first time. Dr. Drew maps fresh and designs a new protocol based on where you are, not where you were. Whether a second intensive makes sense depends on your specific goals and how your integration unfolds. Your practitioners will advise you honestly during the integration period.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where does this take place and what should I plan for?</summary>
+          <div class="faq-answer">
+            <p>Northern San Diego County, California. The immersion runs five consecutive days at approximately 12 hours per day. Plan to arrive the day before and keep your schedule clear for the full five days — this is not something you do between meetings. Specific location details and logistics guidance are provided upon acceptance. Most participants find it useful to stay an additional day afterward to decompress before traveling home.</p>
           </div>
         </details>
       </div>
@@ -1540,10 +1676,28 @@
       <p class="close-stats">Three participants. Two practitioners. Five immersive days of dual-layer neurological and energetic work, anchored within a seven-month program of precision preparation and guided integration.</p>
       <p class="close-pillars">Measurable. Visible. Structural. Permanent.</p>
       <p style="color: var(--warm-white); margin-bottom: 40px;"><strong>If you're done managing your patterns and ready to resolve them, apply below.</strong></p>
-      <a href="#" class="btn">Apply for the Signature Intensive</a>
+      <a href="#" class="btn">See If This Is the Right Fit</a>
       <p class="close-footer">Limited to three participants per cohort. Next available cohort dates provided upon inquiry.</p>
     </div>
   </section>
+
+  <!-- Sticky Mobile CTA Bar -->
+  <div class="sticky-cta-bar">
+    <a href="#apply" class="btn">Apply Now</a>
+  </div>
+
+  <script>
+    // Show sticky CTA after scrolling past hero
+    (function() {
+      var bar = document.querySelector('.sticky-cta-bar');
+      var hero = document.querySelector('.hero');
+      if (!bar || !hero) return;
+      var observer = new IntersectionObserver(function(entries) {
+        bar.classList.toggle('visible', !entries[0].isIntersecting);
+      }, { threshold: 0 });
+      observer.observe(hero);
+    })();
+  </script>
 
 </body>
 </html>
