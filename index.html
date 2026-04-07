@@ -29,6 +29,7 @@
       --gold: #9A7D4C;
       --gold-light: #C4A76C;
       --gold-glow: rgba(154, 125, 76, 0.15);
+      --teal: #00B4B3;
       --dark-bg: #080C11;
       --navy: #0E1D29;
       --warm-white: #FFFEFC;
@@ -190,7 +191,7 @@
       font-size: 1.3rem;
       letter-spacing: 1px;
       padding: 20px 52px;
-      border-radius: 5px;
+      border-radius: 0px;
       background: linear-gradient(210deg, var(--gold-light), var(--gold));
       color: var(--dark-bg);
       text-decoration: none;
@@ -1044,9 +1045,414 @@
     .theme-white .cta-micro {
       color: #888;
     }
+
+    /* ========================================
+       STICKY SECTION NAVIGATION
+       (Pattern from holonexperience.com/about-neurofeedback)
+    ======================================== */
+
+    .section-nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(8, 12, 17, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .section-nav.visible {
+      transform: translateY(0);
+    }
+
+    .section-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .section-nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .section-nav a {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--body-gray-subtle);
+      text-decoration: none;
+      padding: 16px 20px;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .section-nav a:hover,
+    .section-nav a.active {
+      color: var(--gold);
+    }
+
+    .section-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    /* ========================================
+       FULL-BLEED ATMOSPHERIC IMAGE SECTIONS
+       (Pattern from holonexperience.com neural imagery)
+    ======================================== */
+
+    .atmospheric-break {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .atmospheric-break .atmo-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .atmospheric-break .atmo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(8, 12, 17, 0.7) 0%,
+        rgba(8, 12, 17, 0.4) 40%,
+        rgba(8, 12, 17, 0.4) 60%,
+        rgba(8, 12, 17, 0.7) 100%);
+    }
+
+    .atmospheric-break .atmo-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+      padding: 0 24px;
+    }
+
+    .atmospheric-break .atmo-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 16px;
+    }
+
+    .atmospheric-break .atmo-content p {
+      font-size: 1rem;
+      color: var(--body-gray);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .atmospheric-break {
+        height: 300px;
+      }
+    }
+
+    /* ========================================
+       ICON BENEFIT GRID
+       (Pattern from holonexperience.com benefit icons)
+    ======================================== */
+
+    .benefit-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 40px;
+      margin: 56px 0;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .benefit-icon-item {
+      text-align: center;
+    }
+
+    .benefit-icon-item .icon-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      background: rgba(154, 125, 76, 0.06);
+    }
+
+    .benefit-icon-item .icon-circle svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .benefit-icon-item .benefit-label {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--warm-white);
+    }
+
+    .theme-white .benefit-icon-item .benefit-label {
+      color: var(--dark-text);
+    }
+
+    @media (max-width: 600px) {
+      .benefit-icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+      }
+      .benefit-icon-item .icon-circle {
+        width: 64px;
+        height: 64px;
+      }
+      .benefit-icon-item .icon-circle svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    /* ========================================
+       DIAGNOSTIC COMPARISON TABLE
+       (Pattern from holonexperience.com case study)
+    ======================================== */
+
+    .comparison-table {
+      margin: 48px 0;
+    }
+
+    .comparison-table .table-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 0;
+    }
+
+    .comparison-table .table-header span {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 16px 24px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .comparison-row .comp-cell {
+      padding: 20px 24px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .comparison-row .comp-cell:first-child {
+      border-right: 1px solid var(--border-dark);
+    }
+
+    .theme-white .comparison-row {
+      border-bottom-color: var(--border-light);
+    }
+
+    .theme-white .comparison-row .comp-cell:first-child {
+      border-right-color: var(--border-light);
+    }
+
+    @media (max-width: 600px) {
+      .comparison-table .table-header,
+      .comparison-row {
+        grid-template-columns: 1fr;
+      }
+      .comparison-row .comp-cell:first-child {
+        border-right: none;
+        border-bottom: 1px dashed var(--border-dark);
+        padding-bottom: 12px;
+      }
+      .comparison-row .comp-cell:last-child {
+        padding-top: 12px;
+      }
+    }
+
+    /* ========================================
+       NEWSLETTER / SIGNUP FOOTER
+       (Pattern from holonexperience.com footer)
+    ======================================== */
+
+    .newsletter-footer {
+      position: relative;
+      padding: 80px 24px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .newsletter-footer .nf-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--navy);
+    }
+
+    .newsletter-footer .nf-content {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .newsletter-footer .nf-logo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 24px;
+      opacity: 0.7;
+    }
+
+    .newsletter-footer h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 12px;
+    }
+
+    .newsletter-footer p {
+      font-size: 0.9rem;
+      color: var(--body-gray);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .newsletter-footer .nf-form {
+      display: flex;
+      gap: 0;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .newsletter-footer .nf-form input[type="email"] {
+      flex: 1;
+      padding: 14px 18px;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.9rem;
+      background: var(--white-bg);
+      color: var(--dark-text);
+      border: 1px solid var(--dark-bg);
+      border-right: none;
+      border-radius: 0;
+      outline: none;
+    }
+
+    .newsletter-footer .nf-form input[type="email"]::placeholder {
+      color: #999;
+    }
+
+    .newsletter-footer .nf-form button {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      background: var(--dark-bg);
+      color: var(--warm-white);
+      border: 1px solid var(--dark-bg);
+      border-radius: 0;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .newsletter-footer .nf-form button:hover {
+      background: #1a2535;
+    }
+
+    .newsletter-footer .nf-privacy {
+      font-size: 0.75rem;
+      color: var(--body-gray-subtle);
+      margin-top: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .newsletter-footer .nf-form {
+        flex-direction: column;
+      }
+      .newsletter-footer .nf-form input[type="email"] {
+        border-right: 1px solid var(--dark-bg);
+        border-bottom: none;
+      }
+
+      .section-nav a {
+        padding: 14px 14px;
+        font-size: 0.7rem;
+      }
+    }
+
+    /* ========================================
+       TEAL ACCENT — OUTCOME HIGHLIGHTS
+    ======================================== */
+
+    .outcome-highlight {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .teal-stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--teal);
+      line-height: 1.1;
+    }
   </style>
 </head>
 <body>
+
+  <!-- ====================================
+       STICKY SECTION NAVIGATION
+       (Pattern: holonexperience.com in-page nav tabs)
+  ===================================== -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="section-nav-inner">
+      <a href="#sec-problem">The Problem</a>
+      <a href="#sec-insight">The Insight</a>
+      <a href="#sec-method">The Method</a>
+      <a href="#sec-program">The Program</a>
+      <a href="#sec-evidence">The Evidence</a>
+      <a href="#sec-team">Your Team</a>
+      <a href="#apply">Apply</a>
+    </div>
+  </nav>
 
   <!-- ====================================
        SECTION 1: HERO (dark)
@@ -1118,7 +1524,7 @@
   <!-- ====================================
        SECTION 3: ROOT CAUSE (dark)
   ===================================== -->
-  <section class="section theme-dark">
+  <section id="sec-problem" class="section theme-dark">
     <div class="section-inner section-narrow">
       <p class="section-label">Why Everything Hits a Ceiling</p>
       <h2>The Root Cause</h2>
@@ -1144,7 +1550,7 @@
   <!-- ====================================
        SECTION 4: TWO-LAYER REFRAME (white)
   ===================================== -->
-  <section class="section theme-white">
+  <section id="sec-insight" class="section theme-white">
     <div class="section-inner section-narrow">
       <p class="section-label">The Structural Insight</p>
       <h2>Two Layers. One Addressed. One Untouched.</h2>
@@ -1167,6 +1573,19 @@
   </section>
 
   <!-- ====================================
+       ATMOSPHERIC BREAK — Neural imagery
+       (Pattern: holonexperience.com full-bleed brain/neural sections)
+  ===================================== -->
+  <div class="atmospheric-break">
+    <div class="atmo-bg" style="background-image: url('https://images.squarespace-cdn.com/content/v1/61c8e5cca4f04d0d781502fe/9c672c17-c14a-4f16-bad8-f778b84790b6/Neurofeedback_Brain-Basics_5.jpg'); background-color: #0a1420;"></div>
+    <div class="atmo-overlay"></div>
+    <div class="atmo-content">
+      <h3>Your brain controls every thought, emotion, and decision — but has zero internal feedback.</h3>
+      <p>Until it can see itself, it can't change itself.</p>
+    </div>
+  </div>
+
+  <!-- ====================================
        MID-PAGE CTA (after reframe — captures readers sold on the problem)
   ===================================== -->
   <div class="cta-break theme-dark">
@@ -1177,7 +1596,7 @@
   <!-- ====================================
        SECTION 5: MECHANISM (dark)
   ===================================== -->
-  <section class="section theme-dark">
+  <section id="sec-method" class="section theme-dark">
     <div class="section-inner">
       <div class="mechanism-intro">
         <p class="section-label">The Method</p>
@@ -1267,14 +1686,62 @@
         <div class="analogy-block">
           <p><strong>Think of it this way:</strong> Imagine renovating a house. You could strip the wallpaper, repaint every room, and install beautiful new fixtures. But if the foundation has cracks, the walls will shift, the paint will buckle, and within a year the house looks like it did before. Standard neurofeedback renovates the rooms. Dual-Layer Neuro Repatterning fixes the foundation AND renovates the rooms — at the same time.</p>
         </div>
+
+        <!-- ====================================
+             DIAGNOSTIC COMPARISON TABLE
+             (Pattern: holonexperience.com case study two-column)
+        ===================================== -->
+        <div style="margin-top: 64px;">
+          <p class="step-number" style="text-align: center;">How We Differ</p>
+          <h3 style="text-align: center; margin-bottom: 8px;">Standard Approach vs. Dual-Layer Protocol</h3>
+          <div class="comparison-table">
+            <div class="table-header">
+              <span>Standard Neurofeedback</span>
+              <span>Holon Signature Intensive</span>
+            </div>
+            <div class="comparison-row">
+              <div class="comp-cell" style="color: var(--body-gray);">Weekly sessions over months — incremental surface adjustments</div>
+              <div class="comp-cell" style="color: var(--warm-white);">Five days, 12-hour sessions — structural neurological inflection point</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comp-cell" style="color: var(--body-gray);">Addresses brain electrical patterns only (Layer 1)</div>
+              <div class="comp-cell" style="color: var(--warm-white);">Addresses both neurological <em>and</em> energetic patterns (Layers 1 + 2)</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comp-cell" style="color: var(--body-gray);">One practitioner, standard protocols</div>
+              <div class="comp-cell" style="color: var(--warm-white);">Two practitioners, 3:2 ratio, 8-channel synchrony + 1000Hz STEM</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comp-cell" style="color: var(--body-gray);">Maps pathology — designs interventions around deficits</div>
+              <div class="comp-cell" style="color: var(--warm-white);">Maps potential — designs interventions around capability</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comp-cell" style="color: var(--body-gray);">No integration support — gains often plateau or reverse</div>
+              <div class="comp-cell" style="color: var(--warm-white);">Six-month integration arc — changes compound permanently</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ====================================
+       ATMOSPHERIC BREAK 2 — Training environment
+       (Pattern: holonexperience.com full-bleed sections)
+  ===================================== -->
+  <div class="atmospheric-break">
+    <div class="atmo-bg" style="background-image: url('https://images.squarespace-cdn.com/content/v1/61c8e5cca4f04d0d781502fe/8a6699d4-7060-41d9-a5e2-e1036dd06797/case_study_bkg.jpg'); background-color: #0a1420;"></div>
+    <div class="atmo-overlay"></div>
+    <div class="atmo-content">
+      <h3>We are a category of one.</h3>
+      <p>The only facility in the world with the technology to measure, interpret, and train across multiple levels and functions for peak performance, consciousness, and leadership.</p>
+    </div>
+  </div>
+
+  <!-- ====================================
        SECTION 6: THREE-PHASE PROGRAM (white)
   ===================================== -->
-  <section class="section theme-white">
+  <section id="sec-program" class="section theme-white">
     <div class="section-inner section-narrow">
       <p class="section-label">The Program</p>
       <h2>Three Phases. Seven Months. Structural Change.</h2>
@@ -1345,7 +1812,7 @@
   <!-- ====================================
        SECTION 7: PROOF (dark)
   ===================================== -->
-  <section class="section theme-dark">
+  <section id="sec-evidence" class="section theme-dark">
     <div class="section-inner">
       <div class="proof-intro">
         <p class="section-label">The Evidence</p>
@@ -1416,6 +1883,52 @@
           </div>
         </div>
 
+        <!-- ====================================
+             ICON BENEFIT GRID
+             (Pattern: holonexperience.com gold icon grid)
+        ===================================== -->
+        <h3 style="margin-bottom: 8px; text-align: center;">What Training Can Produce</h3>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 8px;">Documented outcomes from Dual-Layer Neuro Repatterning&trade;</p>
+
+        <div class="benefit-icon-grid">
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><circle cx="18" cy="12" r="5"/><path d="M8 30c0-5.5 4.5-10 10-10s10 4.5 10 10"/><path d="M18 2v4M6 12H2M34 12h-4M8.5 4.5l2.8 2.8M27.5 4.5l-2.8 2.8" stroke-linecap="round"/></svg>
+            </div>
+            <span class="benefit-label">Emotional<br>Regulation</span>
+          </div>
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><path d="M18 4c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14S25.7 4 18 4z"/><path d="M18 10v8l5 5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="benefit-label">Sustained<br>Focus</span>
+          </div>
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><path d="M18 4L4 14l14 10 14-10L18 4z"/><path d="M4 20l14 10 14-10" stroke-linecap="round"/><path d="M4 26l14 10 14-10" stroke-linecap="round"/></svg>
+            </div>
+            <span class="benefit-label">Decision<br>Clarity</span>
+          </div>
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><path d="M6 28c4-8 8-20 12-20s8 12 12 20" stroke-linecap="round"/><circle cx="18" cy="8" r="3"/><path d="M14 20h8" stroke-linecap="round"/></svg>
+            </div>
+            <span class="benefit-label">Sleep<br>Architecture</span>
+          </div>
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><path d="M18 4v28M4 18h28" stroke-linecap="round"/><path d="M10 10l16 16M26 10L10 26" stroke-linecap="round" opacity="0.5"/><circle cx="18" cy="18" r="12"/></svg>
+            </div>
+            <span class="benefit-label">Creative<br>Flow States</span>
+          </div>
+          <div class="benefit-icon-item">
+            <div class="icon-circle">
+              <svg viewBox="0 0 36 36"><path d="M18 6a8 8 0 0 0-8 8c0 6 8 16 8 16s8-10 8-16a8 8 0 0 0-8-8z"/><circle cx="18" cy="14" r="3"/></svg>
+            </div>
+            <span class="benefit-label">Stress<br>Resilience</span>
+          </div>
+        </div>
+
         <h3 style="margin-bottom: 16px;">What Participants Report</h3>
         <p style="margin-bottom: 32px;">The people who come to this intensive are not easily impressed. They've invested in coaching, retreats, therapy, plant medicine, and in some cases, other neurofeedback programs. They know what real change feels like — and what temporary relief pretending to be change feels like. Here is what they say, in their own words.</p>
 
@@ -1452,7 +1965,7 @@
   <!-- ====================================
        SECTION 8: PRACTITIONERS (white)
   ===================================== -->
-  <section class="section theme-white">
+  <section id="sec-team" class="section theme-white">
     <div class="section-inner">
       <div style="text-align: center; margin-bottom: 64px;">
         <p class="section-label">Your Team</p>
@@ -1686,6 +2199,26 @@
     <a href="#apply" class="btn">Apply Now</a>
   </div>
 
+  <!-- ====================================
+       NEWSLETTER FOOTER
+       (Pattern: holonexperience.com email signup section)
+  ===================================== -->
+  <div class="newsletter-footer">
+    <div class="nf-bg"></div>
+    <div class="nf-content">
+      <div class="nf-logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/61c8e5cca4f04d0d781502fe/306563ed-78e2-45f9-a0cd-7552cc1836c8/holon_logo_antlers.png" alt="Holon" style="width: 48px; height: auto; opacity: 0.7;">
+      </div>
+      <h3>Join Us on the Frontier of Science, Spirit & Technology</h3>
+      <p>Get access to core practices, practical tools, teachings, and updates from the leading edge of applied consciousness.</p>
+      <form class="nf-form" onsubmit="return false;">
+        <input type="email" placeholder="Email Address" aria-label="Email Address">
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="nf-privacy">We respect your privacy.</p>
+    </div>
+  </div>
+
   <script>
     // Show sticky CTA after scrolling past hero
     (function() {
@@ -1697,6 +2230,55 @@
       }, { threshold: 0 });
       observer.observe(hero);
     })();
+
+    // Sticky section nav — show after scrolling past hero
+    (function() {
+      var nav = document.getElementById('sectionNav');
+      var hero = document.querySelector('.hero');
+      if (!nav || !hero) return;
+      var navObserver = new IntersectionObserver(function(entries) {
+        nav.classList.toggle('visible', !entries[0].isIntersecting);
+      }, { threshold: 0 });
+      navObserver.observe(hero);
+    })();
+
+    // Active section tracking for nav links
+    (function() {
+      var nav = document.getElementById('sectionNav');
+      if (!nav) return;
+      var links = nav.querySelectorAll('a[href^="#sec-"], a[href="#apply"]');
+      var sections = [];
+      links.forEach(function(link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ el: el, link: link });
+      });
+
+      function updateActive() {
+        var scrollY = window.scrollY + 100;
+        var active = null;
+        sections.forEach(function(s) {
+          if (s.el.offsetTop <= scrollY) active = s;
+        });
+        links.forEach(function(l) { l.classList.remove('active'); });
+        if (active) active.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.section-nav a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          var navHeight = document.getElementById('sectionNav').offsetHeight;
+          window.scrollTo({ top: target.offsetTop - navHeight, behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 
 </body>
