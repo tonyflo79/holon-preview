@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Signature Intensive | Holon Experience</title>
+  <meta name="description" content="A multi-month neurological transformation program that resolves limiting patterns at both layers where they're encoded. Three participants. Two practitioners. Five immersive days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       HOLON BRAND SYSTEM
+       Matches holonexperience.com Squarespace
+       Primary Gold: #9A7D4C
+       Dark Background: #080C11
+       Navy Accent: #0E1D29
+       Headings: Playfair Display
+       Body: Noto Sans
+    ======================================== */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #9A7D4C;
+      --gold-light: #C4A76C;
+      --gold-glow: rgba(154, 125, 76, 0.15);
+      --dark-bg: #080C11;
+      --navy: #0E1D29;
+      --warm-white: #FFFEFC;
+      --white-bg: #FFFFFF;
+      --dark-text: #080C11;
+      --body-gray: #A3A3A3;
+      --body-gray-subtle: #8A8A8A;
+      --border-dark: rgba(154, 125, 76, 0.15);
+      --border-light: rgba(8, 12, 17, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--warm-white);
+      background: var(--dark-bg);
+    }
+
+    /* ---- Typography ---- */
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      letter-spacing: -0.005em;
+    }
+
+    h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    }
+
+    h4 {
+      font-size: 1.15rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ---- Layout ---- */
+
+    .section {
+      padding: 100px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-narrow {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ---- Section Themes ---- */
+
+    .theme-dark {
+      background: var(--dark-bg);
+      color: var(--warm-white);
+    }
+
+    .theme-dark p,
+    .theme-dark li {
+      color: var(--body-gray);
+    }
+
+    .theme-dark h1,
+    .theme-dark h2,
+    .theme-dark h3,
+    .theme-dark h4 {
+      color: var(--warm-white);
+    }
+
+    .theme-white {
+      background: var(--white-bg);
+      color: var(--dark-text);
+    }
+
+    .theme-white p,
+    .theme-white li {
+      color: #3a3a3a;
+    }
+
+    .theme-white h1,
+    .theme-white h2,
+    .theme-white h3,
+    .theme-white h4 {
+      color: var(--dark-text);
+    }
+
+    .theme-navy {
+      background: var(--navy);
+      color: var(--warm-white);
+    }
+
+    .theme-navy p,
+    .theme-navy li {
+      color: var(--body-gray);
+    }
+
+    /* ---- Section Label ---- */
+
+    .section-label {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .theme-white .section-label {
+      color: var(--gold);
+    }
+
+    /* ---- Decorative Rule ---- */
+
+    .rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      border: none;
+      margin: 32px 0;
+    }
+
+    .rule-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---- Buttons ---- */
+
+    .btn {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 18px 48px;
+      border-radius: 5px;
+      background: linear-gradient(210deg, var(--gold-light), var(--gold));
+      color: var(--dark-bg);
+      text-decoration: none;
+      transition: opacity 0.25s ease, transform 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .theme-white .btn {
+      color: var(--white-bg);
+    }
+
+    /* ---- Strong / Emphasis ---- */
+
+    .theme-dark strong {
+      color: var(--warm-white);
+      font-weight: 600;
+    }
+
+    .theme-white strong {
+      color: var(--dark-text);
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    /* ---- Blockquote ---- */
+
+    blockquote {
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      margin: 40px 0;
+      font-style: italic;
+    }
+
+    blockquote p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    blockquote cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    .theme-dark blockquote cite {
+      color: var(--warm-white);
+    }
+
+    .theme-white blockquote cite {
+      color: var(--dark-text);
+    }
+
+    /* ========================================
+       SECTION 1: HERO
+    ======================================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 100px;
+      position: relative;
+      background: linear-gradient(180deg, var(--dark-bg) 0%, #0a1018 50%, var(--dark-bg) 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(154, 125, 76, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero .pre-headline {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      margin-bottom: 36px;
+      color: var(--warm-white);
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.85em;
+      margin-top: 8px;
+      color: var(--body-gray);
+    }
+
+    .hero .sub-headline {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--body-gray);
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+
+    .hero .hero-stat-line {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--warm-white);
+      margin-bottom: 48px;
+    }
+
+    .hero .btn {
+      margin-top: 8px;
+    }
+
+    /* ========================================
+       SECTION 2: OPENING
+    ======================================== */
+
+    .opening-copy p {
+      margin-bottom: 24px;
+    }
+
+    .opening-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .emphasis-block {
+      margin: 40px 0;
+      padding: 0;
+    }
+
+    .emphasis-block p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .theme-white .emphasis-block p {
+      color: var(--dark-text);
+    }
+
+    .theme-dark .emphasis-block p {
+      color: var(--warm-white);
+    }
+
+    /* ========================================
+       SECTION 3: ROOT CAUSE
+    ======================================== */
+
+    .callout-box {
+      margin: 44px 0;
+      padding: 36px 40px;
+      border: 1px solid var(--border-dark);
+      border-radius: 4px;
+      background: rgba(14, 29, 41, 0.35);
+    }
+
+    .callout-box p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--warm-white);
+      margin: 0;
+    }
+
+    .theme-white .callout-box {
+      background: rgba(8, 12, 17, 0.03);
+      border-color: var(--border-light);
+    }
+
+    .theme-white .callout-box p {
+      color: var(--dark-text);
+    }
+
+    /* ========================================
+       SECTION 5: MECHANISM
+    ======================================== */
+
+    .mechanism-intro {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .mechanism-intro h2 {
+      margin-bottom: 24px;
+    }
+
+    .mechanism-intro p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .step-block {
+      margin-bottom: 64px;
+    }
+
+    .step-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .step-block h3 {
+      margin-bottom: 20px;
+    }
+
+    .step-block p {
+      margin-bottom: 20px;
+    }
+
+    .layer-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 36px 0;
+    }
+
+    .layer-card {
+      padding: 32px;
+      border: 1px solid var(--border-dark);
+      border-radius: 4px;
+      background: rgba(14, 29, 41, 0.3);
+    }
+
+    .layer-card h4 {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .layer-card p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .analogy-block {
+      margin-top: 48px;
+      padding: 36px 40px;
+      border-left: 2px solid var(--gold);
+      background: rgba(14, 29, 41, 0.2);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .analogy-block p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .analogy-block strong {
+      color: var(--warm-white);
+    }
+
+    /* ========================================
+       SECTION 6: THREE-PHASE PROGRAM
+    ======================================== */
+
+    .phase-block {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .phase-block:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .phase-label {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .phase-block h3 {
+      margin-bottom: 20px;
+    }
+
+    .phase-block p {
+      margin-bottom: 16px;
+    }
+
+    .phase-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .phase-block li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 14px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .phase-block li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .theme-white .phase-block li::before {
+      background: var(--gold);
+    }
+
+    .price-block {
+      margin-top: 56px;
+      padding-top: 56px;
+      border-top: 1px solid var(--border-light);
+      text-align: center;
+    }
+
+    .price-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--dark-text);
+      margin-bottom: 20px;
+    }
+
+    .price-block p {
+      max-width: 620px;
+      margin: 0 auto 16px;
+    }
+
+    .price-block .btn {
+      margin-top: 32px;
+    }
+
+    /* ========================================
+       SECTION 7: PROOF
+    ======================================== */
+
+    .proof-intro {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .proof-intro h2 {
+      margin-bottom: 20px;
+    }
+
+    .qeeg-placeholder {
+      padding: 60px 40px;
+      border: 1px dashed rgba(154, 125, 76, 0.3);
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 72px;
+      background: rgba(14, 29, 41, 0.2);
+    }
+
+    .qeeg-placeholder p {
+      font-size: 0.95rem;
+      color: var(--body-gray-subtle);
+      font-style: italic;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .testimonial {
+      padding: 0;
+    }
+
+    .testimonial p {
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.75;
+      margin-bottom: 16px;
+      color: var(--body-gray);
+    }
+
+    .testimonial cite {
+      font-style: normal;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--warm-white);
+    }
+
+    /* ========================================
+       SECTION 8: PRACTITIONERS
+    ======================================== */
+
+    .practitioners-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 56px;
+    }
+
+    .practitioner h3 {
+      margin-bottom: 8px;
+    }
+
+    .practitioner .practitioner-title {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .practitioner .bio-placeholder {
+      padding: 40px 32px;
+      border: 1px dashed var(--border-light);
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .practitioner .bio-placeholder p {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--body-gray-subtle);
+    }
+
+    .drew-note {
+      margin-top: 56px;
+      padding-top: 56px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .drew-note h3 {
+      margin-bottom: 20px;
+    }
+
+    .drew-note p {
+      margin-bottom: 16px;
+    }
+
+    /* ========================================
+       SECTION 9: WHO THIS IS FOR
+    ======================================== */
+
+    .identity-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .identity-item {
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .identity-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .identity-item strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 10px;
+    }
+
+    .identity-item p {
+      margin: 0;
+    }
+
+    .who-close {
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .who-close p {
+      font-style: italic;
+    }
+
+    /* ========================================
+       SECTION 10: WHAT THIS IS NOT
+    ======================================== */
+
+    .not-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .not-card {
+      padding: 36px;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+    }
+
+    .not-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+    }
+
+    .not-card p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ========================================
+       SECTION 11: FAQ
+    ======================================== */
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .faq-item summary {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--warm-white);
+      padding: 28px 40px 28px 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 28px;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--gold);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 0 28px;
+    }
+
+    .faq-answer p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--body-gray);
+    }
+
+    /* ========================================
+       SECTION 12: CLOSE
+    ======================================== */
+
+    .close-section {
+      text-align: center;
+      position: relative;
+      padding: 120px 24px;
+      background: linear-gradient(180deg, var(--dark-bg) 0%, #0c1520 40%, #0f1a28 70%, var(--dark-bg) 100%);
+    }
+
+    .close-section::before {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(154, 125, 76, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .close-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .close-content p {
+      margin-bottom: 24px;
+      color: var(--body-gray);
+    }
+
+    .close-stats {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--warm-white) !important;
+      margin-bottom: 8px;
+    }
+
+    .close-pillars {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold) !important;
+      margin-bottom: 40px !important;
+    }
+
+    .close-content .btn {
+      margin-bottom: 28px;
+    }
+
+    .close-footer {
+      font-size: 0.92rem;
+      color: var(--body-gray-subtle) !important;
+      font-style: italic;
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+
+    @media (max-width: 900px) {
+      .layer-pair,
+      .testimonials-grid,
+      .practitioners-grid,
+      .not-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 72px 20px;
+      }
+
+      .hero {
+        padding: 100px 20px 80px;
+        min-height: auto;
+      }
+
+      .callout-box,
+      .analogy-block {
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 56px 16px;
+      }
+
+      .hero {
+        padding: 80px 16px 64px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.55rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 16px 36px;
+        font-size: 0.95rem;
+      }
+
+      .faq-item summary {
+        font-size: 1rem;
+        padding: 22px 32px 22px 0;
+      }
+
+      .layer-card {
+        padding: 24px;
+      }
+
+      .not-card {
+        padding: 28px;
+      }
+
+      /* Stack step grids on mobile */
+      .step-block[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================
+       SECTION 1: HERO (dark)
+  ===================================== -->
+  <section class="hero theme-dark">
+    <!-- HERO BACKGROUND VIDEO: The existing Holon site uses a looping background video
+         with gold particle/sparkle effects on dark background. This creates the signature
+         "Holon look" — warm gold light against deep dark, organic and alive.
+
+         OPTION A (PREFERRED): Use the same gold-particle background video from holonexperience.com.
+         AMY: Export the background video from your Squarespace hero section and provide as .mp4
+
+         OPTION B: Source a similar gold-particle/light-streak video from stock (Artgrid, Storyblocks).
+         Search terms: "gold particles dark background", "golden light dust bokeh loop",
+         "warm gold sparkles abstract dark"
+
+         OPTION C: Use a facility photo as static fallback (treatment room or exterior). -->
+    <div class="hero-bg-video" style="position: absolute; inset: 0; z-index: 0; overflow: hidden;">
+      <!-- Replace src with actual video file path -->
+      <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+        <source src="assets/hero-gold-particles.mp4" type="video/mp4">
+      </video>
+      <!-- Gradient overlay to ensure text readability -->
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,17,0.5) 0%, rgba(8,12,17,0.85) 70%, rgba(8,12,17,1) 100%);"></div>
+    </div>
+
+    <!-- HERO IMAGE: Practitioner-in-session photo, positioned left side like the existing site.
+         The Holon homepage uses a photo of Amy working with a client (c1.png), offset to the left
+         with the headline text on the right. This is their signature layout.
+         AMY: Provide a high-quality session photo (practitioner with participant, warm lighting). -->
+    <div class="hero-session-image" style="position: absolute; left: 0; bottom: 0; width: 45%; height: 80%; z-index: 0; overflow: hidden; opacity: 0.7;">
+      <div style="width: 100%; height: 100%; background: url('assets/hero-session.png') center/cover no-repeat;">
+        <!-- Placeholder -->
+        <div style="width: 100%; height: 100%; background: rgba(8,12,17,0.6); display: flex; align-items: flex-end; padding: 24px; color: #4a5568; font-size: 12px; font-style: italic;">[ Session photo — practitioner with participant, warm lighting, positioned left ]</div>
+      </div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0%, rgba(8,12,17,0.8) 80%, rgba(8,12,17,1) 100%);"></div>
+    </div>
+    <div class="hero-content" style="position: relative; z-index: 1;">
+      <p class="pre-headline">For executives, founders, and high-performers who have done the work — and hit the wall</p>
+      <h1>
+        You've Optimized Everything You Can Consciously Control.
+        <span>The Patterns That Remain Live Deeper.</span>
+      </h1>
+      <p class="sub-headline">The Holon Signature Intensive is a multi-month neurological transformation program that resolves limiting patterns at both layers where they're encoded — your brain's electrical architecture and your nervous system's deeper wiring — using precision EEG brain mapping and a proprietary integration of advanced neurofeedback and energetic work.</p>
+      <p class="hero-stat-line">Three participants. Two practitioners. Five immersive days anchored within a seven-month engagement.</p>
+      <a href="#apply" class="btn">Apply for the Signature Intensive</a>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 2: OPENING (white)
+  ===================================== -->
+  <section class="section theme-white">
+    <div class="section-inner section-narrow">
+      <div class="opening-copy">
+        <p>You've done the coaching. Probably the therapy. Maybe plant medicine. Definitely the breathwork, the cold plunge, the executive health optimization protocol.</p>
+        <p>Some of it helped. Some of it was genuinely transformative. You're not dismissing any of it.</p>
+        <div class="emphasis-block">
+          <p>But something persists.</p>
+        </div>
+        <p>A ceiling you keep meeting. A pattern that keeps reasserting itself. An underlying architecture that no amount of insight, discipline, or willpower seems to permanently shift.</p>
+        <p>The decision you should be able to make clearly — but can't quite land. The stress pattern that meditation manages for a few hours but never actually resolves. The emotional reactivity that surfaces in exactly the moments where you most need steadiness.</p>
+        <p>You know there's something deeply out of sync, even if you're excelling on a performance level. You feel it in the gap between what you're capable of and what you're actually experiencing.</p>
+
+        <!-- LIFESTYLE IMAGE: Full-width atmospheric image breaking up the text.
+             Art direction: Executive in contemplative moment — not staged corporate.
+             Think: looking out a window, walking alone, seated in thought. Warm tones, natural light.
+             AMY: Provide a lifestyle/editorial photo (1600x900 min) or we can source stock. -->
+        <div style="margin: 48px -24px; height: 360px; background: url('assets/contemplative-lifestyle.jpg') center/cover no-repeat; border-radius: 0;">
+          <!-- Placeholder gray block if no image -->
+          <div style="width: 100%; height: 100%; background: #E8E4DC; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #999; font-style: italic;">[ Lifestyle image — executive in contemplative moment, natural light ]</div>
+        </div>
+
+        <hr class="rule">
+        <p>You're not broken. You're not weak. You're not undisciplined.</p>
+        <p><strong>You're working against architecture that lives below the level of conscious access.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 3: ROOT CAUSE (dark)
+  ===================================== -->
+  <section class="section theme-dark">
+    <div class="section-inner section-narrow">
+      <p class="section-label">Why Everything Hits a Ceiling</p>
+      <h2>The Root Cause</h2>
+      <hr class="rule">
+      <p>Here's what most approaches — even very good ones — have in common:</p>
+      <p>They work at the level of conscious insight. They help you <em>understand</em> your patterns so you can <em>override</em> them.</p>
+      <p>Therapy gives you a narrative. Coaching gives you a framework. Meditation gives you awareness. Plant medicine gives you a window.</p>
+      <p>And conscious override works — for a while. Until the pressure exceeds your bandwidth. Until the pattern reinstalls itself at 2am, or in the boardroom, or in the conversation where the stakes are highest.</p>
+      <div class="callout-box">
+        <p>Conscious override is exhausting. It's temporary. And it breaks down the moment you need it most.</p>
+      </div>
+      <p>The reason isn't a mystery. It's structural.</p>
+      <p>Insight lives in the prefrontal cortex. The patterns you're trying to override live deeper — in the limbic system, in the brainstem, in electrical timing relationships between brain structures that your conscious mind cannot access.</p>
+      <p>Your brain — the organ controlling every thought, emotion, and decision — has zero internal feedback. It can't monitor itself. When it's looping in stress, it doesn't know. When it's running survival patterns coded decades ago, it can't tell. When it's sabotaging the very thing you're trying to build, it has no idea.</p>
+      <p>It just keeps running the same programs — patterns coded in childhood, reinforced by experience, hardwired by repetition.</p>
+      <div class="callout-box">
+        <p>No matter how much you understand intellectually, you can't change what your brain can't see.</p>
+      </div>
+      <p style="font-style: italic; color: var(--warm-white);">But that's only half the story.</p>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 4: TWO-LAYER REFRAME (white)
+  ===================================== -->
+  <section class="section theme-white">
+    <div class="section-inner section-narrow">
+      <p class="section-label">The Structural Insight</p>
+      <h2>Two Layers. One Addressed. One Untouched.</h2>
+      <hr class="rule">
+      <p>Most neurofeedback programs — even very good ones — work at a single level: your brain's electrical patterns.</p>
+      <p>They give your brain a mirror. They let it see its own activity in real time. And that mirror is powerful. It produces real, measurable, documented change in brain wave architecture.</p>
+      <p>That's Layer One. And it matters.</p>
+      <div class="emphasis-block">
+        <p>But there's a second layer that neurofeedback alone cannot reach.</p>
+      </div>
+      <p>Trauma imprints. Protective structures that were brilliant survival strategies at one point in your life but are now running the show. Patterns encoded not just in the brain's electrical activity, but in the autonomic nervous system, in somatic memory, in the deeper energetic architecture of the body.</p>
+      <p>These patterns don't show up on a standard EEG readout. They don't respond to conscious insight. They don't resolve when you understand them.</p>
+      <p>They resolve when they're addressed directly — at the layer where they actually live.</p>
+      <div class="callout-box">
+        <p>This is why "I've tried everything" keeps being true: because everything you've tried addresses the same single layer.</p>
+      </div>
+      <p>Layer Two — the nervous system, the somatic field, the deeper energetic body — remains untouched. And it silently reinstalls the patterns that Layer One work resolves.</p>
+      <p>It's not that those approaches didn't work. They worked beautifully — on one layer. The ceiling isn't a failure of effort. <strong>It's a structural gap.</strong></p>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 5: MECHANISM (dark)
+  ===================================== -->
+  <section class="section theme-dark">
+    <div class="section-inner">
+      <div class="mechanism-intro">
+        <p class="section-label">The Method</p>
+        <h2>Dual-Layer Neuro Repatterning™</h2>
+        <hr class="rule rule-center">
+        <p>The Holon Signature Intensive is the only program that addresses both layers simultaneously. We call this process <strong>Dual-Layer Neuro Repatterning™</strong> — a precision protocol that identifies and resolves limiting patterns at both levels where they're encoded: the neurological and the energetic.</p>
+      </div>
+
+      <div class="section-narrow">
+        <!-- Step 1 -->
+        <div class="step-block" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+          <div>
+            <p class="step-number">Step 1</p>
+            <h3>Precision Mapping</h3>
+            <p>Before you arrive, your practitioners already know your history, your goals, and your neurological landscape.</p>
+            <p>On Day One, Dr. Drew Pierson reads your QEEG brain map — but not the way most clinicians do. Most clinicians read a brain map looking for what's broken: the pathology, the dysfunction, the deficits.</p>
+            <p>Drew reads for <em>potential</em>. He identifies the specific electrical patterns creating your ceiling AND the deeper energetic signatures reinforcing them. The dormant capacities. The hidden architecture of what's possible.</p>
+            <p><strong>By the end of Day One, your team knows exactly what to target — at both layers.</strong></p>
+          </div>
+          <!-- QEEG BRAIN MAP IMAGE: Single colorful QEEG topographic brain map.
+               Art direction: The circular multicolor brain mapping output — blues, greens, yellows, reds
+               showing different brain regions. This is what Drew reads. Scientific, beautiful, specific.
+               AMY: Provide a sample QEEG topographic map image (800x800 min). De-identify patient data. -->
+          <div style="aspect-ratio: 1; background: #0C1620; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.15);">
+            <div style="text-align: center; padding: 32px; color: #6B7684; font-size: 13px; font-style: italic;">
+              <div style="width: 120px; height: 120px; border-radius: 50%; border: 2px solid rgba(154,125,76,0.3); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 11px; color: var(--gold);">QEEG</span>
+              </div>
+              [ QEEG topographic brain map — colorful neural activity visualization ]
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-block">
+          <p class="step-number">Step 2</p>
+          <h3>Dual-Layer Intervention</h3>
+          <p>Over five days, you undergo simultaneous neurofeedback and energetic work — both modalities running in concert, targeting both layers at once.</p>
+
+          <div class="layer-pair">
+            <div class="layer-card">
+              <h4>Layer One — Neurological</h4>
+              <p>Advanced neurofeedback gives your brain a real-time mirror of its own electrical patterns. For the first time, it can see what it's been doing — and begin to shift. We typically see immediate improvements in electrical function of up to 40% compared to the initial EEG baseline. By Day Five, we observe shifts that would take months or years in standard clinical neurofeedback settings.</p>
+            </div>
+            <div class="layer-card">
+              <h4>Layer Two — Energetic</h4>
+              <p>Simultaneously, deep energetic and somatic work reaches the patterns that neurofeedback cannot — the protective structures, the nervous system holding patterns, the survival architecture encoded in the body. This is the work that prevents Layer One gains from being silently reversed.</p>
+            </div>
+          </div>
+
+          <p><strong>Two practitioners. Three participants maximum. Twelve hours a day.</strong> No other program offers this ratio.</p>
+          <p>The neurofeedback gives your brain a mirror. The energetic work reaches what the mirror can't see.</p>
+
+          <!-- TREATMENT ENVIRONMENT PHOTO: Full-width immersive image of the actual treatment space.
+               Art direction: The neurofeedback room in session — EEG cap on participant, screens showing
+               brain waves, practitioner nearby. Warm lighting, intimate, NOT clinical/sterile.
+               Or: Close-up of the EEG equipment with warm ambient lighting. Show the technology.
+               AMY: Provide 1-2 photos of actual sessions or treatment room (1600x900 min). -->
+          <div style="margin: 48px 0; border-radius: 8px; overflow: hidden; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.15);">
+            <div style="width: 100%; height: 400px; background: #0C1620; display: flex; align-items: center; justify-content: center; color: #6B7684; font-size: 13px; font-style: italic;">[ Treatment room in session — EEG equipment, warm lighting, intimate practitioner-participant setting ]</div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-block" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+          <!-- NEURAL GROWTH VISUAL: Conceptual image of neural pathways forming/connecting.
+               Art direction: Abstract neuroscience visualization — glowing neural connections,
+               dendrites branching, synapses firing. Dark background with blue/gold/white highlights.
+               NOT a stock photo brain scan. More artistic/conceptual. Or: a time-lapse style
+               graphic showing 1mm/month neural tissue growth over 6 months.
+               AMY: Source a neuroscience visualization or we can create a custom graphic. -->
+          <div style="aspect-ratio: 1; background: #0C1620; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.15);">
+            <div style="text-align: center; padding: 32px; color: #6B7684; font-size: 13px; font-style: italic;">
+              [ Neural pathway visualization — glowing connections forming, 1mm/month growth concept ]
+            </div>
+          </div>
+          <div>
+            <p class="step-number">Step 3</p>
+            <h3>Structural Consolidation</h3>
+            <p>Neural tissue grows at roughly one millimeter per month. The precision work done during the immersion continues building long after you leave — new pathways strengthening, new connections consolidating, the felt experience of clarity, resilience, and ease deepening steadily.</p>
+            <p>A six-month integration arc with ongoing practitioner support ensures the changes compound rather than fade. Because both layers were addressed, there's no blind spot silently reversing your gains.</p>
+            <p><strong>The changes accomplished during the intensive don't fade. They compound.</strong></p>
+          </div>
+        </div>
+
+        <!-- Analogy -->
+        <div class="analogy-block">
+          <p><strong>Think of it this way:</strong> Imagine renovating a house. You could strip the wallpaper, repaint every room, and install beautiful new fixtures. But if the foundation has cracks, the walls will shift, the paint will buckle, and within a year the house looks like it did before. Standard neurofeedback renovates the rooms. Dual-Layer Neuro Repatterning fixes the foundation AND renovates the rooms — at the same time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 6: THREE-PHASE PROGRAM (white)
+  ===================================== -->
+  <section class="section theme-white">
+    <div class="section-inner section-narrow">
+      <p class="section-label">The Program</p>
+      <h2>Three Phases. Seven Months. Structural Change.</h2>
+      <hr class="rule">
+      <p style="font-style: italic; margin-bottom: 48px;">This is not a five-day retreat. It is a multi-month neurological transformation program, anchored by a five-day immersion.</p>
+
+      <!-- Phase 1 -->
+      <div class="phase-block">
+        <p class="phase-label">Phase 1 — Weeks 1–4</p>
+        <h3>Neurological Preparation</h3>
+        <p>Before you arrive on-site, the work has already begun.</p>
+        <ul>
+          <li><strong>Comprehensive intake and health history</strong> — your practitioners study your neurological and energetic landscape before Day One</li>
+          <li><strong>Personalized supplement and nutrition protocol</strong> — optimizing your brain's readiness for intensive neurofeedback</li>
+          <li><strong>Shadow work and self-assessment processes</strong> — surfacing the patterns that will become the targets of the immersion</li>
+          <li><strong>Program orientation and team introduction</strong> — you arrive knowing your practitioners, and they arrive knowing you</li>
+        </ul>
+        <p>By the time you walk through the door, your team already knows your brain intimately. The work is already underway.</p>
+      </div>
+
+      <!-- IMMERSION ENVIRONMENT: Full-width photo between Phase 1 and Phase 2.
+           Art direction: The Holon facility exterior OR treatment space wide shot. Cinematic quality.
+           Warm, inviting, premium. Think boutique wellness meets neuroscience lab.
+           AMY: Provide a wide exterior or interior panoramic of the Holon space (1600x700 min). -->
+      <div style="margin: 0 -24px 48px; height: 320px; overflow: hidden;">
+        <div style="width: 100%; height: 100%; background: #E8E4DC; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #999; font-style: italic;">[ Holon facility — exterior or wide interior shot, warm cinematic lighting ]</div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="phase-block">
+        <p class="phase-label">Phase 2 — The Catalyst</p>
+        <h3>The Five-Day Immersion</h3>
+        <p>The most intensive neurological transformation experience available anywhere.</p>
+        <ul>
+          <li><strong>Day 1:</strong> Advanced QEEG brain mapping + precision pattern identification at both layers</li>
+          <li><strong>Days 2–4:</strong> Full dual-layer sessions — neurofeedback and energetic work in concert, 12+ hours per day, with two practitioners dedicated to a maximum of three participants</li>
+          <li><strong>Day 5:</strong> Integration dialogue, customized post-immersion plan, and next-phase preparation</li>
+        </ul>
+        <p>This is not passive. This is not observation. For five days, your only job is your own transformation.</p>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="phase-block">
+        <p class="phase-label">Phase 3 — The Compounding</p>
+        <h3>The Six-Month Integration Arc</h3>
+        <p>The immersion is the catalyst. What follows is the full unfolding.</p>
+        <ul>
+          <li><strong>Regular practitioner touchpoints</strong> — ongoing support as the neural changes consolidate</li>
+          <li><strong>Personalized lifestyle and biohacking recommendations</strong> — sustaining and accelerating the structural changes</li>
+          <li><strong>Ongoing supplement guidance</strong> — supporting the biological process of neural growth</li>
+          <li><strong>Integration coaching</strong> — navigating the shifts in perception, decision-making, and emotional regulation as they deepen over months</li>
+        </ul>
+        <p>Neural tissue grows at one millimeter per month. The six-month arc isn't an afterthought — it's where the structural change becomes permanent. This is why the immersion alone isn't enough, and why no other program in this space offers it.</p>
+        <p><strong>Total engagement: approximately seven months.</strong></p>
+      </div>
+
+      <!-- Price -->
+      <div class="price-block">
+        <p class="price-amount">$17,500</p>
+        <p>Across seven months of practitioner-guided neurological transformation. That's roughly $2,500 per month for the only dual-layer program available anywhere — with a 3-person cap and 12-hour immersive days that no competitor matches.</p>
+        <p><strong>You've spent more than this on approaches that addressed half the problem.</strong></p>
+        <a href="#apply" class="btn">Apply for the Signature Intensive</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 7: PROOF (dark)
+  ===================================== -->
+  <section class="section theme-dark">
+    <div class="section-inner">
+      <div class="proof-intro">
+        <p class="section-label">The Evidence</p>
+        <h2>What Changes Look Like</h2>
+        <hr class="rule rule-center">
+      </div>
+
+      <div class="section-narrow">
+        <h3 style="margin-bottom: 16px;">The Brain Maps</h3>
+        <p>We do something no one else in this space does: we show you.</p>
+        <p>Before-and-after QEEG brain maps with detailed write-ups — not just for the practitioners, but for you. Measurable, visible, structural change in your brain's electrical architecture.</p>
+        <p>This isn't anecdote. This isn't "I feel different." This is quantified, documented neurological transformation that you can see with your own eyes.</p>
+
+        <!-- QEEG BEFORE/AFTER GALLERY: The single most important visual on this page.
+             Art direction: Side-by-side BEFORE (left) and AFTER (right) QEEG topographic maps.
+             Each pair shows the same participant, same brain view. The "after" should show
+             visible improvements in coherence/balance (more green/blue, less red/hot spots).
+             Include Dr. Drew's 2-3 sentence clinical annotation beneath each pair.
+             AMY: Provide 3-5 de-identified before/after QEEG pairs with Drew's write-ups. -->
+        <div style="margin: 32px 0 48px;">
+          <!-- Before/After Pair 1 -->
+          <div style="background: #0C1620; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
+            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
+              </div>
+              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
+              </div>
+            </div>
+            <p style="font-size: 14px; color: var(--body-gray); font-style: italic; border-top: 1px solid rgba(154,125,76,0.15); padding-top: 16px;">[ Dr. Drew's clinical annotation: specific changes observed, standard deviations of improvement, what this means for the participant's daily experience ]</p>
+          </div>
+
+          <!-- Before/After Pair 2 -->
+          <div style="background: #0C1620; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
+            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
+              </div>
+              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
+              </div>
+            </div>
+            <p style="font-size: 14px; color: var(--body-gray); font-style: italic; border-top: 1px solid rgba(154,125,76,0.15); padding-top: 16px;">[ Dr. Drew's clinical annotation ]</p>
+          </div>
+
+          <!-- Before/After Pair 3 -->
+          <div style="background: #0C1620; border-radius: 8px; padding: 32px; box-shadow: 0px 9px 27px 2px rgba(154,125,76,0.1);">
+            <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 16px; align-items: center; margin-bottom: 20px;">
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">Before — Day 1</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — pre-intervention ]</div>
+              </div>
+              <div style="text-align: center; color: var(--gold); font-size: 24px;">&rarr;</div>
+              <div>
+                <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px;">After — Day 5</p>
+                <div style="aspect-ratio: 4/3; background: #111820; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5568; font-size: 12px; font-style: italic;">[ QEEG topographic map — post-intervention ]</div>
+              </div>
+            </div>
+            <p style="font-size: 14px; color: var(--body-gray); font-style: italic; border-top: 1px solid rgba(154,125,76,0.15); padding-top: 16px;">[ Dr. Drew's clinical annotation ]</p>
+          </div>
+        </div>
+
+        <h3 style="margin-bottom: 32px;">What Participants Say</h3>
+
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>"As a long-time personal development workshop junkie, I have never experienced a stronger combination of transformation and self-optimization. I came home a better, more effective, and happier man."</p>
+            <cite>Dave Burns, Executive Coach</cite>
+          </div>
+          <div class="testimonial">
+            <p>"I now have more access to perspective in the moment with a greater sense of lucidity, and feel better able to make deliberate decisions. I'm also able to hold a stable focus for greater durations of time."</p>
+            <cite>Jason Appel, CEO</cite>
+          </div>
+          <div class="testimonial">
+            <p>"There is no exotic vacation spot on earth that can do what this intensive did to recharge my batteries and reset my life — for body, mind, and soul. I have come out of it incredibly focused on personal development, with dedicated daily practices and a deeper passion for my own evolution than I've ever had before."</p>
+            <cite>J.G., Executive</cite>
+          </div>
+          <div class="testimonial">
+            <p>"There are many great resources out there to make whatever kinds of improvements one would like to make, but I personally have experienced nothing previously that provided such a seismic jumpstart."</p>
+            <cite>Jason Appel, CEO</cite>
+          </div>
+          <div class="testimonial">
+            <p>"The best parts of you expand and the limiting parts are healed and put to rest."</p>
+            <cite>Holon Participant</cite>
+          </div>
+          <div class="testimonial">
+            <p>"I now live from a place of being connected in head, heart, and soul."</p>
+            <cite>Holon Participant</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 8: PRACTITIONERS (white)
+  ===================================== -->
+  <section class="section theme-white">
+    <div class="section-inner">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <p class="section-label">Your Team</p>
+        <h2>Your Practitioners</h2>
+        <hr class="rule rule-center">
+      </div>
+
+      <div class="practitioners-grid section-narrow" style="max-width: 900px; margin: 0 auto 0;">
+        <div class="practitioner">
+          <!-- AMY HEADSHOT: Professional portrait, warm lighting, approachable but authoritative.
+               Not a corporate headshot — more editorial. 600x800 min, portrait orientation. -->
+          <div style="aspect-ratio: 3/4; background: #E8E4DC; border-radius: 4px; margin-bottom: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #999; font-size: 13px; font-style: italic;">[ Dr. Amy Albright — professional portrait ]</div>
+          <h3>Dr. Amy Albright</h3>
+          <p class="practitioner-title">Co-Founder, Holon Experience</p>
+          <div class="bio-placeholder">
+            <p>Updated bio pending — science-forward framing to be provided by Amy</p>
+          </div>
+        </div>
+        <div class="practitioner">
+          <!-- DREW HEADSHOT: Professional portrait, warm lighting. Could show him with EEG equipment
+               or brain maps in background (subtle). 600x800 min, portrait orientation. -->
+          <div style="aspect-ratio: 3/4; background: #E8E4DC; border-radius: 4px; margin-bottom: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #999; font-size: 13px; font-style: italic;">[ Dr. Drew Pierson — professional portrait, possibly with EEG equipment ]</div>
+          <h3>Dr. Drew Pierson</h3>
+          <p class="practitioner-title">Clinical Neuroscientist</p>
+          <div class="bio-placeholder">
+            <p>Updated bio pending — emphasizing QEEG expertise, 8-channel synchrony, transcranial capabilities up to 1000Hz STEM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-narrow drew-note">
+        <h3>A note on how Drew reads your brain</h3>
+        <p>Most clinicians look at a brain map for what's broken. Drew looks for what's possible. He reads between the lines — the hidden potentials, the dormant capacities, the architecture of who you could become if the limiting patterns weren't running the show.</p>
+        <p>This distinction matters. Programs that map pathology design interventions around deficits. Programs that map potential design interventions around capability. The experience — and the outcomes — are fundamentally different.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 9: WHO THIS IS FOR (dark)
+  ===================================== -->
+  <section class="section theme-dark">
+    <div class="section-inner section-narrow">
+      <p class="section-label">Is This You</p>
+      <h2>Who This Is For</h2>
+      <hr class="rule">
+      <p style="margin-bottom: 48px;">The Holon Signature Intensive is designed for a specific person.</p>
+
+      <ul class="identity-list">
+        <li class="identity-item">
+          <strong>You are high-performing.</strong>
+          <p>You lead — a company, a team, a creative practice, a family, or all of them. You're not struggling to function. You're struggling to access the level you know is available.</p>
+        </li>
+        <li class="identity-item">
+          <strong>You've done the work.</strong>
+          <p>This isn't your first investment in personal growth. You've done therapy, coaching, maybe meditation or plant medicine. You've read the books. You respect the process. And you've hit a ceiling that none of those approaches have fully resolved.</p>
+        </li>
+        <li class="identity-item">
+          <strong>You think structurally.</strong>
+          <p>You don't want inspiration — you want architecture. You want to understand <em>why</em> the ceiling exists, not just push through it with more willpower. You value measurability. You trust science. You're drawn to evidence.</p>
+        </li>
+        <li class="identity-item">
+          <strong>You're ready for permanent change, not another practice to maintain.</strong>
+          <p>You're not looking for a technique to add to your morning routine. You're looking for a structural shift — a new neurological baseline that doesn't require ongoing discipline to sustain.</p>
+        </li>
+        <li class="identity-item">
+          <strong>You can commit fully for five days.</strong>
+          <p>The immersion requires 12-hour days of deep work with no outside distractions. If you can clear five days and trust the process, the results compound from there.</p>
+        </li>
+      </ul>
+
+      <div class="who-close">
+        <p>This is not for everyone. Three participants per cohort. A multi-month commitment. A significant investment. It's designed for people who are done managing their patterns and ready to resolve them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 10: WHAT THIS IS NOT (white)
+  ===================================== -->
+  <section class="section theme-white">
+    <div class="section-inner">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <p class="section-label">Setting Expectations</p>
+        <h2>What This Is Not</h2>
+        <hr class="rule rule-center">
+      </div>
+
+      <div class="not-grid" style="max-width: 900px; margin: 0 auto;">
+        <div class="not-card">
+          <h3>This is not group psychotherapy.</h3>
+          <p>You will not be asked to process your trauma in front of strangers. The work is individualized, practitioner-guided, and deeply private. Three participants maximum — and each person's protocol is customized to their specific brain map and goals.</p>
+        </div>
+        <div class="not-card">
+          <h3>This is not passive brain enhancement.</h3>
+          <p>You will not sit in a chair and have neurofeedback "done to you" while you relax. The immersion requires your full engagement — 12-hour days of active neurological and energetic work. The depth of the transformation is proportional to the depth of your participation.</p>
+        </div>
+        <div class="not-card">
+          <h3>This is not a retreat.</h3>
+          <p>There are no yoga classes, no spa treatments, no networking sessions. For five days, your only agenda is your own neurological transformation. Everything else falls away.</p>
+        </div>
+        <div class="not-card">
+          <h3>This is not a quick fix.</h3>
+          <p>It's a seven-month program. The five-day immersion is the catalyst, but the structural changes consolidate over the six-month integration arc that follows. You're signing up for a transformation, not an experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 11: FAQ (dark)
+  ===================================== -->
+  <section class="section theme-dark">
+    <div class="section-inner">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <p class="section-label">Questions</p>
+        <h2>Frequently Asked</h2>
+        <hr class="rule rule-center">
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How is this different from other neurofeedback programs?</summary>
+          <div class="faq-answer">
+            <p>Most neurofeedback programs — including very good ones — work exclusively with the brain's electrical patterns. That's powerful, and it produces real results. But patterns are encoded at two levels: the neurological (brain wave architecture) and the deeper energetic body (nervous system, somatic memory, protective structures). Programs that address only the electrical patterns leave the second layer untouched — which is why gains often plateau or slowly reverse. The Signature Intensive is the only program that addresses both layers simultaneously, which is why the changes compound rather than fade.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What kind of results can I expect?</summary>
+          <div class="faq-answer">
+            <p>We typically see immediate improvements in electrical function of up to 40% compared to the initial EEG baseline. By Day Five, we observe shifts of approximately two standard deviations — changes that would take months or years in standard clinical neurofeedback settings. Beyond the measurable brain changes, participants consistently report improved clarity, emotional regulation, decision-making, sleep quality, and a felt sense of being "unlocked" or "reset." These changes deepen over the six-month integration period as neural tissue continues growing at roughly 1mm per month.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why five days? Why not longer?</summary>
+          <div class="faq-answer">
+            <p>Five days of 12-hour immersive sessions with a 3:2 participant-to-practitioner ratio produces a neurological inflection point that weekly sessions cannot match. The intensity and continuity allow the brain to reorganize at a structural level rather than making incremental surface adjustments. The six-month integration arc then allows those structural changes to consolidate permanently. Extending the immersion would produce diminishing returns; the compounding happens in the months that follow.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens in the preparation phase?</summary>
+          <div class="faq-answer">
+            <p>During the four weeks before your immersion, you'll complete a comprehensive health history and goals assessment, begin a personalized supplement and nutrition protocol, engage in shadow work and self-assessment processes, and meet your practitioner team. This isn't paperwork — it's the foundation for precision. By Day One, your practitioners already know your neurological and energetic landscape intimately.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if I've already done neurofeedback?</summary>
+          <div class="faq-answer">
+            <p>Many of our participants have. Standard clinical neurofeedback — weekly sessions over months — produces real but incremental change at the electrical level. The Signature Intensive goes deeper on two axes: the immersive format produces structural rather than incremental change, and the dual-layer protocol addresses the energetic patterns that standard neurofeedback cannot reach. If you've done neurofeedback and found it helpful but incomplete, this is why.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is this backed by science?</summary>
+          <div class="faq-answer">
+            <p>Neurofeedback is grounded in decades of peer-reviewed research on neuroplasticity — the brain's ability to rewire its own structure. QEEG brain mapping is a well-established diagnostic tool used in clinical neuroscience worldwide. Dr. Drew Pierson's protocol has been significantly upgraded with 8-channel synchrony and transcranial stimulation capabilities up to 1000Hz STEM. We provide before-and-after QEEG brain maps with detailed write-ups so you can see the measured changes in your own brain architecture.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What's the investment?</summary>
+          <div class="faq-answer">
+            <p>$17,500 for the complete multi-month program — four weeks of preparation, five days of immersive dual-layer work, and six months of practitioner-guided integration. This is not a fee for five days; it's an investment in approximately seven months of elite neurological transformation with a maximum of three participants per cohort.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where does this take place?</summary>
+          <div class="faq-answer">
+            <p>Northern San Diego County, California. Specific location details are provided upon acceptance.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I know if I'm a fit?</summary>
+          <div class="faq-answer">
+            <p>If you've read this far and recognized yourself, you probably are. The application process includes a conversation with our team to ensure mutual fit — we are selective because the intimate format requires that every participant in a cohort is fully committed.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================
+       SECTION 12: CLOSE (dark with gradient glow)
+  ===================================== -->
+  <section id="apply" class="close-section theme-dark">
+    <div class="close-content">
+      <p class="section-label">Next Step</p>
+      <h2 style="margin-bottom: 36px;">You Already Know</h2>
+      <hr class="rule rule-center">
+      <p>You've spent years managing patterns that live below the level of conscious access.</p>
+      <p>You've invested in approaches that work beautifully — at one layer. And you've felt the ceiling where those gains plateau, where the pattern quietly reinstalls, where conscious override breaks down under pressure.</p>
+      <p>The structural gap isn't a failure of effort. It's a failure of architecture. Two layers. One addressed. One untouched.</p>
+      <p style="color: var(--warm-white);"><strong>The Holon Signature Intensive resolves both.</strong></p>
+      <p class="close-stats">Three participants. Two practitioners. Five immersive days of dual-layer neurological and energetic work, anchored within a seven-month program of precision preparation and guided integration.</p>
+      <p class="close-pillars">Measurable. Visible. Structural. Permanent.</p>
+      <p style="color: var(--warm-white); margin-bottom: 40px;"><strong>If you're done managing your patterns and ready to resolve them, apply below.</strong></p>
+      <a href="#" class="btn">Apply for the Signature Intensive</a>
+      <p class="close-footer">Limited to three participants per cohort. Next available cohort dates provided upon inquiry.</p>
+    </div>
+  </section>
+
+</body>
+</html>
